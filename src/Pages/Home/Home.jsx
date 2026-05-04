@@ -1,10 +1,11 @@
+import Banner from "./Banner/Banner";
 
 const Home = () => {
   return (
     <div>
-        <h1 className="text-xl font-bold mb-4">Welcome to Bistro Client!</h1>
+       <Banner></Banner>
     </div>
-  )
-}
+  );
+};
 
 export default Home
