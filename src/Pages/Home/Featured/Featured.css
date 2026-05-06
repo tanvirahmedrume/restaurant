@@ -1,4 +1,7 @@
 .feature-item{
-    background-image: url('../../../../assets/home/featured.jpg');
+    background-image: url('../../../assets/home/featured.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 20px;
 }
 
