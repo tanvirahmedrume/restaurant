@@ -2,11 +2,11 @@
 const MenuItem = (item) => {
     const {name, recipe, price, image} = item.item;
   return (
-    <div>
+    <div className="flex space-x-4">
       
-            <img className="w-100 h-70" src={image} alt="" />
+            <img style={{borderRadius: '0 200px 200px 200px '}} className="w-29.5 h-26" src={image} alt="" />
             <div>
-                <h3>{name}</h3>
+                <h3 className="uppercase font-bold">{name} ----------------</h3>
                 <p>{recipe}</p>
             </div>
             <p className="text-yellow-500">${price}</p>
