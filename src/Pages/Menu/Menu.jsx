@@ -9,16 +9,14 @@ import pizzaImg from "../../assets/menu/pizza-bg.jpg";
 import saladImg from "../../assets/menu/salad-bg.jpg";
 import soupImg from "../../assets/menu/soup-bg.jpg";
 
-
 const Menu = () => {
-
   const [menu] = useMenu();
 
-  const desserts = menu.filter(item => item.category === 'dessert');
-  const soup = menu.filter(item => item.category === 'soup');
-  const salad = menu.filter(item => item.category === 'salad');
-  const pizza = menu.filter(item => item.category === 'pizza');
-  const offered = menu.filter(item => item.category === 'offered');
+  const desserts = menu.filter((item) => item.category === "dessert");
+  const soup = menu.filter((item) => item.category === "soup");
+  const salad = menu.filter((item) => item.category === "salad");
+  const pizza = menu.filter((item) => item.category === "pizza");
+  const offered = menu.filter((item) => item.category === "offered");
 
   return (
     <div>
@@ -33,73 +31,56 @@ const Menu = () => {
       <SectionTitle
         heading={"Today's Offer"}
         subHeading={"Don't miss"}
-      >
-      </SectionTitle>
+      ></SectionTitle>
 
-
-{/* Offered MEnu */}
+      {/* Offered MEnu */}
       <MenuCategory
         items={offered}
         title="Today's Offer"
         coverImg={menuImg}
-      >
-      </MenuCategory>
-
+      ></MenuCategory>
 
       {/* Desserts itmes */}
 
       <SectionTitle
         heading={"Desserts"}
         subHeading={"Sweet Treats"}
-      >
-      </SectionTitle>
-     <MenuCategory
+      ></SectionTitle>
+      <MenuCategory
         items={desserts}
         title="Desserts"
         coverImg={dessertImg}
-      >
-      </MenuCategory>
+      ></MenuCategory>
 
       {/* Soup items */}
-        <SectionTitle
+      <SectionTitle
         heading={"Soups"}
         subHeading={"Warm and Comforting"}
-      >
-      </SectionTitle>
-       
-      <MenuCategory
-        items={soup}
-        title="Soup"
-        coverImg={soupImg}
-      >
-      </MenuCategory>
+      ></SectionTitle>
 
-        {/* Salad items */}
-        <SectionTitle
+      <MenuCategory items={soup} title="Soup" coverImg={soupImg}></MenuCategory>
+
+      {/* Salad items */}
+      <SectionTitle
         heading={"Salads"}
         subHeading={"Fresh and Healthy"}
-      >
-      </SectionTitle>
+      ></SectionTitle>
       <MenuCategory
         items={salad}
         title="Salads"
         coverImg={saladImg}
-      >
-      </MenuCategory> 
+      ></MenuCategory>
 
-        {/* Pizza items */}
-        <SectionTitle
+      {/* Pizza items */}
+      <SectionTitle
         heading={"Pizzas"}
         subHeading={"Delicious and Satisfying"}
-      >
-      </SectionTitle>
+      ></SectionTitle>
       <MenuCategory
         items={pizza}
         title="Pizza"
         coverImg={pizzaImg}
-      >
-      </MenuCategory>
-
+      ></MenuCategory>
     </div>
   );
 };
