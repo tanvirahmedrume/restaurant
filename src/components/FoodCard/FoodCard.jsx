@@ -1,7 +1,11 @@
 
 const FoodCard = () => {
   return (
-    <div>FoodCard</div>
+    <div>
+      <h1>FoodCard</h1>
+      <p>This is a simple food card component.</p>
+      
+    </div>
   )
 }
 
